@@ -9,3 +9,7 @@ def test3(request):
     return render(request,'index.html')
 def test4(request):
     return render(request,'head.html')    
+def test5(request):
+    return render(request,'college.html')  
+def test6(request):
+    return render(request,'login.html')      
