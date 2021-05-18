@@ -1,0 +1,121 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<title>anim</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info ">
+        <a class="navbar-brand" href="#"><h1><I><B>WORLD</I>TRIP</B></H1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" style="color: rgb(12, 20, 134);"><B>MENU</B> <span class="sr-only">(current)</span></a>
+            </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0 ml-auto ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search destination" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+    </nav>
+    <div class="container fluid">
+      <div class="jumbotron m-3 text-center bg-success text-light" style="height: 200px;">
+        <h1 class="display-4"><b>HURRY UP!!!</b></h1>
+        <p class="lead">The world is calling.....</p>
+        <hr class="my-2">
+      </div>
+    </div>
+    <div class="container-fluid" style="height: 520px;">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="background-color: cornflowerblue;">
+        <div class="carousel-inner" >
+          <div class="carousel-item active" >
+              <img src="{% static 'image/HIMALAYA.jpg' %}" class="d-block w-100 " style="height: 500px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'image/Taj-Mahal.jpg' %}" class="d-block w-100"style="height: 500px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'image/france.jpg' %}" class="d-block w-100" style="height: 500px;" alt="...">
+          </div>
+        </div>
+    </div>
+    </div>
+      <div class="m-auto">
+      <div class="card-columns">
+        <div class="card " >
+          
+          <div class="card-body text-white bg-info">
+            <h5 class="card-title">HIMALAYA</h5>
+            <p class="card-text">himalayas, great mountain system of Asia forming a barrier between the Plateau of Tibet to the north and the alluvial.</p>
+          </div>
+        </div>
+       
+        <div class="card ">
+          
+          <div class="card-body text-white bg-info">
+            <h5 class="card-title">TAH MAHAL</h5>
+            <p class="card-text">The Taj displays its different moods through its varied shades. The Taj has as many shades as any kind of beauty can ever have!.</p>
+            
+          </div>
+        </div>
+       
+        <div class="card text-white bg-info">
+          <div class="card-body">
+            <h5 class="card-title">PARIS</h5>
+            <p class="card-text">Paris is located in northern central France, in a north-bending arc of the river Seine whose crest includes two islands.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+        <form style="width: 400px; background-color: rgb(207, 207, 205);padding-left: 50px;">
+            <h1>Book your seat now!!</h1><br>
+            <div class="form-row">
+              <div class="form-group ">
+                <label for="">Name</label>
+                <input type="text" class="form-control" >
+              </div>
+              
+              <div class="form-group">
+                <label for="">Mobile number</label>
+                <input type="text" class="form-control" >
+              </div>
+            
+            <div class="form-group">
+              <label for="">place</label>
+              <input type="text" class="form-control"  >
+            </div>
+        </div>
+             <button type="submit" class="btn btn-primary">Sign in</button>
+             
+          </form>
+          <img src="{% static 'image/trip.jpg' %}" class="rounded float-right">
+
+         
+
+    </div>
+    
+    
+<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
