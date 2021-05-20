@@ -13,5 +13,9 @@ def test7(request):
     return render(request,'anim.html') 
 def test8(request):
     return render(request,'facebook.html')     
-def test6(request):
-    return render(request,'login.html')      
+#def test6(request):
+  #  return render(request,'login.html')
+def test9(request):
+    return render(request,'w3.html')     
+def test10(request):
+    return render(request,'new.html')       
