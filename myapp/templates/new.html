@@ -11,18 +11,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>JavaScript</title>
 </head>
 <body>
-    <!--<input type="text" id="number1">
+   <!-- <input type="text" id="number1">
     <input type="text" id="number2">
     <button type="button" onclick=sum()>sum</button>
       <script >
        document.write("<h1>HELLO WORLD</h1>");
         alert("successfull");
-         console.log("HIIIIIIIIIIIIIIIIII");
-        function sum(){}-->
-        <script>
+        console.log("HIIIIIIIIIIIIIIIIII");
+        function sum(){
+            a=Number(document.getElementById("number1").value);
+            b=Number(document.getElementById("number2").value);
+            console.log(a+b)
+        }
+      <script>
             a=Number(prompt("enter the first element"));
             b=Number(prompt("enter the second element"));
             document.write(a+b);
@@ -33,8 +37,84 @@
             console.log(a/b);
             console.log(a%b);
             console.log(typeof(a,b));
-            
         
+      </script>
+      <script>
+          a=0;
+          b=1;
+          c=0;
+          console.log(a);
+          console.log(b);
+          limit=Number(prompt("enter the limit"));
+          for(i=2;i<=;i++){
+
+              c=a+b;
+    
+              console.log(c);
+              a=b;
+              b=c;
+            
+          }-->
+          <script>
+              a=[];
+              sum=0;
+              for(i=0;i<5;i++){
+                  n=Number(prompt("enter marks"));
+                  a.push(n);
+                  sum=sum+a[i];
+                  
+              }
+              for(i of a){
+                  console.log(i)
+              }
+              
+              console.log( sum );
+
+              switch(true){
+                        case sum >=90:
+                          console.log("A GRADE");
+                          break;
+
+                         case sum >=80:
+                          console.log("B GRADE");
+                          break;
+                      
+                        case sum >=70:
+                          console.log(" C grade");
+                          break;
+                      
+                         case sum >=60:
+                          console.log(" D grade");
+                          break;
+                      
+                         case sum <=50:
+                          console.log(" failed");
+                          break;
+                      
+                         default:
+                          console.log("enter valid number")
+                         break;
+              }
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </script>
 

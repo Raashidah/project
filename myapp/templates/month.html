@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d = new Date();
+        var n = d.getFullYear();
+        var m=d.getUTCMonth();
+        var l=d.getDay();
+
+        birthyear=prompt("year")
+        birthmonth=prompt("month")
+        birthday=prompt("day")
+
+        var year=n-birthyear;
+        
+        if ( m>birthmonth){
+            month=m-birthmonth;
+        }
+        else{
+            month=birthmonth-m;
+        }
+
+        if ( l>birthday){
+            day=birthday-l;
+        }
+        else{
+           day=birthday-l;
+        }
+        console.log(year)
+        console.log(month)
+        console.log(day)
+    </script>
+</body>
+</html>

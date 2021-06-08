@@ -14,8 +14,22 @@ def test7(request):
 def test8(request):
     return render(request,'facebook.html')     
 #def test6(request):
-  #  return render(request,'login.html')
+    #return render(request,'login.html')
 def test9(request):
-    return render(request,'w3.html')     
+    return render(request,'w3.html')
 def test10(request):
-    return render(request,'new.html')       
+    return render(request,'new.html') 
+def test11(request):
+    return render(request,'pattern.html') 
+def test12(request):
+  return render(request,'pal.html') 
+def test13(request):
+    return render(request,'sort.html') 
+def test14(request):
+    return render(request,'count.html')
+def test15(request):
+    return render(request,'second.html')
+def test16(request):
+    return render(request,'js.html')     
+def test17(request):
+    return render(request,'calculator.html') 

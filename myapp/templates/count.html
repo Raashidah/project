@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>college</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script>
+        string = prompt('Enter a string: ');
+        letter = prompt('Enter a letter to check: ');
+        console.log(string)
+        console.log('letter=', letter)
+        let len = string.length;
+        result = countString(string, letter);
+
+        function countString(string, letter) {
+            var count = 0;
+            for (i = 0; i < len; i++) {
+                if (string[i] == letter) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(result,)
+
+    </script>
+
+</body>
+
+</html>

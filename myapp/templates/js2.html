@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- <input type="text" class="first"  >
+    <button onclick="check()">check</button> 
+    <script>
+
+        function check(){
+        a = document.getElementsByClassName("first");
+        console.log(a[0].value);
+        }
+    </script> -->
+
+
+    <!-- <img src="../static/image/4.jpg" alt="" id=image1>
+<button onclick="change()">change</button>
+<button id="second" onclick="next()">back</button>
+<script>
+    function change(){
+        document.getElementById("image1").src="C:\Users\hasif\Desktop\myproject\myapp\static\image\1.jpg";
+        document.getElementById("second").hidden=false;
+        // document.getElementById("second").innerText="backk"
+      
+    } -->
+    
+
+    <body>
+        <button onclick="change()">ON </button>
+        <img id="off" src="../static/image/OFFbulb.jpg">
+
+        <button hidden id="on"
+            onclick="document.getElementById('off').src='../static/image/OFFbulb.jpg'">OFF</button>
+        <script>
+
+            function change() {
+                document.getElementById('off').src = '../static/image/ONbulb.jpg';
+                document.getElementById("on").hidden = false;
+            }
+        </script>
+    </body>
+    </html>
+
+</body>
+
+</html>

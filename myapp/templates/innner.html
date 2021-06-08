@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: solid;
+        width: fit-content;
+        margin: 100px 400px;
+        
+    }
+</style>
+<body>
+    <div  >
+    <form action="" >
+        <p id="usererror" style="color: red;"></p>
+        <label for="">username</label>
+        <input type="text" id="username"><br><br>
+        <label for="">Password</label>
+        <input type="password" id="password"><br><br>
+        <label for="">age</label>
+        <input type="text " id="age"><br><br>
+        <label for="">mobile number</label>
+        <input type="text" id="mobilenumber"><br><br>
+        <label for="">gender</label>
+        <input type="radio" id="male" name="gender" >male
+        <input type="radio" id="female" name="gender">female<br><br>
+        <button type="submit" onclick="return login()">LOGIN</button>
+        
+    </form>
+</div>
+<script>
+      function login(){
+          username=document.getElementById("username");
+          password=document.getElementById("password");
+          age=document.getElementById("age");
+          mobilenumber=document.getElementById("mobilenumber");
+          gender=document.getElementById("male");
+          gender=document.getElementById("female");
+          if(username.value==""){
+              username.style.borderColor="red";
+              document.getElementById('usererror').innerHTML="enter username";
+              username.focus();
+              return false;
+              
+              
+          }
+         
+          else if(password.value==""){
+              password.style.borderColor="red";
+              password.focus();
+              document.getElementById("password");
+              alert("enter your password");
+              return false;
+          }
+          else if(password.value.length < 8){
+              password.style.borderColor="red";
+              password.focus();
+              document.getElementById("password");
+              alert("password must be atleast 8 character");
+              return false;
+          }
+          else if(age.value=="" || isNaN(age.value)){
+              alert("enter your age");
+              age.focus()
+              return false;
+
+          }
+          else if(mobilenumber.value=="" || isNaN(mobilenumber.value) || mobilenumber.value.length!=10){
+              alert('enter mobile number');
+              age.focus();
+              return false;
+          }
+          else if(document.getElementById("male").checked=="" && document.getElementById("female").checked==""){
+                alert("select gender")
+                document.getElementById("male").focus();
+                document.getElementById("female").focus()
+            
+                return false;
+          }
+          
+          else{
+              return true;
+          }
+      }
+</script>
+</body>
+</html>
