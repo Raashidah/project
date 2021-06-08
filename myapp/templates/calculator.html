@@ -65,7 +65,7 @@
             </div><br>
             <div>
                 <input type="button" id="size" class="btn"value="0" onclick="calc(0)">
-                <input type="button" id="size" class="btn"value="." onclick="calc('.')">
+                <input type="button" id="size" class="btn"value="." onclick="calc1(this.value)">
                 <input type="button" id="size" class="btn"value="c" onclick="document.getElementById('display').value = '' ">
                 <input type="button" id="op" class="btn"value="/" onclick="operation('/')">
     
@@ -80,21 +80,35 @@
     
 
     <script>
-        function calc(num) {
-           
+       
+        function calc(num) {    
+                  
             document.getElementById('display').value += num;
-    
-           
+       
         }
+        function calc1(b){  
+                  
+                  var a=document.getElementById('display') ;
+                  if(a.value%1==0){
+                     document.getElementById("display").value +=b;
+                 }
+              
+
+            
+        }
+            
+        
         function operation(op) {
             operator = op;
             num1 = Number(document.getElementById('display').value);
             document.getElementById('display').value = " ";
             
+            
             console.log(num1)
         }
         function solution(){
             num2 = Number(document.getElementById('display').value);
+            
             if (operator == "+") {
                 result = num1 + num2;
             }
