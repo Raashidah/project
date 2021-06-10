@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input  type="text" id="dis" readonly ><br><br>
+    <button onclick="calcu(1)">1</button >
+    <button onclick="calcu(2)">2</button>
+    <button onclick="calcu(3)">3</button>
+    <button onclick="calcu(4)">4</button>
+    <button onclick="opp('+')">+</button><br><br>
+
+    <button onclick="calcu(1)">5</button>
+    <button onclick="calcu(1)">6</button>
+    <button onclick="calcu(1)">7</button>
+    <button onclick="calcu(1)">8</button>
+    <button onclick="calcu('-')">-</button><br><br>
+
+    <button onclick="calcu(1)">9</button>
+    <button onclick="calcu(1)">0</button>
+    <button onclick="calcu(1)">/</button>
+    <button onclick="calcu(1)">*</button>
+    <button onclick="calcu('c')">c</button><br><br>
+
+    <button onclick="equal('=')">=</button>
+    
+<script>
+    function calcu(numm){
+        document.getElementById('dis').value +=numm;
+
+    }
+    function opp(op){
+        
+             num1 = Number(document.getElementById('dis').value);
+             
+             document.getElementById('dis').value = " ";
+
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
