@@ -16,9 +16,11 @@ urlpatterns = [
     path('pal',views.test12,name='pallindrome'),
     path('sort',views.test13,name='sort'),
     path('count',views.test14,name='count'),
-     path('second',views.test15,name='second'),
-     path('js',views.test16,name='js'),
-     path('calc',views.test17,name='calc'),
+    path('second',views.test15,name='second'),
+    # path('js',views.test16,name='js'),
+    path('slider',views.test18,name='slider'),
+    path('calc',views.test17,name='calc'),
+   
     
 
 ]

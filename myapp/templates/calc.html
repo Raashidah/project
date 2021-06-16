@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,8 @@
 
 
 <body>
-    <input  type="text" id="dis" readonly ><br><br>
-    <button onclick="calcu(1)">1</button >
+    <input type="text" id="dis" readonly><br><br>
+    <button onclick="calcu(1)">1</button>
     <button onclick="calcu(2)">2</button>
     <button onclick="calcu(3)">3</button>
     <button onclick="calcu(4)">4</button>
@@ -29,24 +30,42 @@
     <button onclick="calcu('c')">c</button><br><br>
 
     <button onclick="equal('=')">=</button>
-    
-<script>
-    function calcu(numm){
-        document.getElementById('dis').value +=numm;
 
-    }
-    function opp(op){
-        
-             num1 = Number(document.getElementById('dis').value);
-             
-             document.getElementById('dis').value = " ";
+    <script>
+        count = 0;
+        function calcu(numm) {
+            document.getElementById('dis').value += numm;
 
+        }
+        function dot() {
 
-    }
-
+            var b = document.getElementById('display').value;
+            count++;
+            if (count <= 1) {
+                document.getElementById('display').value += dot;
 
 
+            }
+            else {
+                document.getElementById('display').value;
 
-</script>
+            }
+
+        }
+
+        function opp(op) {
+
+            num1 = Number(document.getElementById('dis').value);
+
+            document.getElementById('dis').value = " ";
+
+
+        }
+
+
+
+
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .slide{
+            width: 200px;
+            position: absolute;
+            background-color: blueviolet;
+            height: 200px;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1 >hello world</h1>
+    <button id="hide">hide</button>
+    <button id="show">show</button><br>
+
+
+    <button id="hide1">fadeout</button>
+    <button id="show2">fadein</button>
+    <button id="ani">animate</button>
+    <h2 >hello world</h2>
+   
+<br>
+    <button id="anim">view</button>
+    <div class="slide"></div>
+    <script>
+        $("#hide").click(function(){
+            $('h1').hide();
+        })
+        $("#show").click(function(){
+            $('h1').show();
+        })
+
+
+        $("#hide1").click(function(){
+            $('h2').fadeOut();
+        })
+        $("#show2").click(function(){
+            $('h2').fadeIn();
+        })
+        $("#ani").click(function(){
+            $('h2').slideToggle(1000)
+        })
+        $("#anim").click(function(){
+            $('div').animate({left :'+=50px',opacity:'0.6',height:'150px',});
+           
+        })
+
+    </script>
+</body>
+</html>

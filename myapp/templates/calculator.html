@@ -5,117 +5,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <title>calculator</title>
 </head>
 <style>
     .div1 {
-        width: 300px;
+        width: 500px;
         border: solid;
         border-color: teal;
         /* margin: 100px 400px; */
-       
+
         background-color: rgb(167, 194, 191);
     }
 
     #size {
-        width: 50px;
+        width: 70px;
         background-color: rgb(103, 155, 114);
         border-radius: 50%;
-       
+        height: 50px;
+
     }
-    #op{
-        width: 50px;
+
+    #op {
+        width: 70px;
         background-color: rgb(255, 147, 147);
         border-radius: 50%;
-       
+        height: 50px;
     }
 </style>
 
 <body>
- <div class="row  " style="margin-left: 30px;margin-top: 20px;">
-     <div class="col-lg-4" ></div>
-     <div class="col-lg-3 div1" align="center">
-        <br>
+    <div class="row  " style="margin-top: 50px;">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12"></div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 div1" align="center">
+            <br>
             <div>
-                <input type="text" id="display" style="width: 200px;height: 40px;background-color: rgb(250, 250, 250)" readonly>
-    
+                <input type="text" id="display" style="width: 250px;height: 60px;background-color: rgb(250, 250, 250)"
+                    readonly>
+
             </div> <br>
             <div>
                 <input type="button" class="btn" id="size" value="7" onclick="calc(7)">
                 <input type="button" class="btn" id="size" value="8" onclick="calc(8)">
-                <input type="button" class="btn"id="size" value="9" onclick="calc(9)">
-                <input type="button" class="btn"id="op" value="+" onclick="operation('+')">
-    
+                <input type="button" class="btn" id="size" value="9" onclick="calc(9)">
+                <input type="button" class="btn" id="op" value="+" onclick="operation('+')">
+
             </div><br>
             <div>
-                <input type="button" class="btn"id="size" value="4" onclick="calc(4)">
-                <input type="button" class="btn"id="size" value="5" onclick="calc(5)">
-                <input type="button" class="btn"id="size" value="6" onclick="calc(6)">
-                <input type="button" class="btn"id="op" value="-" onclick="operation('-')">
-    
+                <input type="button" class="btn" id="size" value="4" onclick="calc(4)">
+                <input type="button" class="btn" id="size" value="5" onclick="calc(5)">
+                <input type="button" class="btn" id="size" value="6" onclick="calc(6)">
+                <input type="button" class="btn" id="op" value="-" onclick="operation('-')">
+
             </div><br>
             <div>
-                <input type="button" class="btn"id="size" value="1" onclick="calc(1)">
-                <input type="button" class="btn"id="size" value="2" onclick="calc(2)">
-                <input type="button"class="btn" id="size" value="3" onclick="calc(3)">
-                <input type="button"class="btn" id="op" value="*" onclick="operation('*')">
-    
+                <input type="button" class="btn" id="size" value="1" onclick="calc(1)">
+                <input type="button" class="btn" id="size" value="2" onclick="calc(2)">
+                <input type="button" class="btn" id="size" value="3" onclick="calc(3)">
+                <input type="button" class="btn" id="op" value="*" onclick="operation('*')">
+
             </div><br>
             <div>
-                <input type="button" id="size" class="btn"value="0" onclick="calc(0)">
-                <input type="button" id="size" class="btn" value="." onclick="calc1(this.value)">
-                <input type="button" id="size" class="btn"value="c" onclick="document.getElementById('display').value = '' ">
-                <input type="button" id="op" class="btn"value="/" onclick="operation('/')">
-    
+                <input type="button" id="size" class="btn" value="0" onclick="calc(0)">
+                <input type="button" id="size" class="btn" value="." onclick="calc1('.')">
+                <input type="button" id="size" class="btn" value="c"
+                    onclick="document.getElementById('display').value = '' ">
+                <input type="button" id="op" class="btn" value="/" onclick="operation('/')">
+
             </div><br>
-            <input type="button" class="btn btn-success" style="width: 200px;background-color:rgb(90, 133, 99) ;" value="="
+            <input type="button" class="btn btn-success"
+                style="height: 50px; width: 200px;background-color:rgb(90, 133, 99) ;" value="="
                 onclick="solution()"><br><br>
-       
-     </div>
-     <div class="col-lg-1"></div> 
-     <div class="col-lg-4"></div> 
- </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12"></div>
+    </div>
     <script>
-       
-        function calc(num) {    
-                  
+
+        function calc(num) {
+
             document.getElementById('display').value += num;
-       
+
         }
-        function calc1(a){  
-                  
-                  var b=document.getElementById('display').value ;
-                  len=b.length;
-                  var count = 0;
-                for (i = 0; i < len; i++) {
+        function calc1(dot) {
+
+            var b = document.getElementById('display').value;
+            len = b.length;
+            var count = 0;
+            for (i = 0; i < len; i++) {
                 if (b[i] == '.') {
                     count++;
                 }
             }
-                  if(count==0){
-                    document.getElementById('display').value +=a;
-                
-                 }
-                 else{
-                     document.getElementById('display').value;
-                     
-                 }
-               
-                }
-            
-        
+            if (count == 0) {
+                document.getElementById('display').value += dot;
+            }
+            else {
+                document.getElementById('display').value;
+            }
+        }
         function operation(op) {
             operator = op;
             num1 = Number(document.getElementById('display').value);
             document.getElementById('display').value = " ";
-            
-            
         }
-        function solution(){
+        function solution() {
             num2 = Number(document.getElementById('display').value);
-            
+
             if (operator == "+") {
                 result = num1 + num2;
             }

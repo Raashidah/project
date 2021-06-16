@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<style>
+    .slide{
+        background-color: chartreuse;
+        border: solid;
+        width: 50%;
+
+    }
+</style>
+</head>
+<body>
+   
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, dolores! Accusamus impedit totam itaque fuga fugiat distinctio? Nam illo, ad nesciunt molestias temporibus enim vitae error nemo corrupti ut explicabo!</p>
+    <div >
+        helllo world
+    </div>
+    <button id="show">click</button>
+  <button id="hide">remove</button>
+
+
+    <script>
+        $('#show').click(function(){
+            $('p,div').addClass('slide')
+        })
+        $('#hide').click(function(){
+            $('div').toggleClass('slide')
+        })
+    </script>
+</body>
+
+</html>

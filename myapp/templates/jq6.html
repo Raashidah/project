@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <style>
+        .siblings{
+            border: red;
+            background-color: salmon;
+            padding-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="siblings">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ipsam laborum et ratione, eum nihil iure eaque ullam voluptas inventore perferendis sint aperiam ad adipisci? Vel perferendis excepturi repudiandae suscipit.</p>
+        <h1>hello</h1>
+        <h2>world</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad enim cumque quos excepturi laborum deserunt iste ea nemo reprehenderit ratione vero blanditiis dignissimos facere nisi minus, deleniti necessitatibus voluptatem. Molestiae.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('h2').siblings().css("background-color","red")
+            $('h1').siblings().css("background-color","green")
+
+        })
+    </script>
+</body>
+</html>

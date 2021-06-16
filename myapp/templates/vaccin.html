@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vaccination</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        input {
+            width: 300px;
+
+            height: 50px;
+            display: none;
+        }
+
+        ::placeholder {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12" ></div>
+        <div class="col-lg-6 ">
+            <h3 align="center" style="color: rgb(15, 15, 117);margin-top: 50px;">Register for vaccination</h3><br>
+            <p align="center" style="font-size: 15px;"> Your Photo ID will be verified at the time of your vaccination
+                appointment.
+                Please provide the details of the Photo Id you will carry for vaccination.</p>
+
+            <br><br>
+            <div align="center">
+                <select style="width: 300px;height: 50px;" value="" id="select">
+                    <option selected style="color: gray;" value="select an id proof" >Photo ID proof</option>
+                    <option value="Aadhaar" id="one">Aadhaar Card</option>
+                    <option value="Driving License" id="2">Driving License</option>
+                    <option value="PAN Card" id="3">PAN Card</option>
+                    <option value="Passport" id="4">Passport</option>
+                    <option value="NPR Smartcard" id="5">NPR Smartcard</option>
+                    <option value="Voter Id" id="6">Voter Id</option>
+                    <option value="Unique disability ID" id="7">Unique disability ID</option>
+                </select>
+                <br><br>
+                <input type="text" placeholder="enter number" id="an"><br>
+                <button style="background-color: rgb(141, 141, 223);">Register</button>
+            </div>
+        </div>
+        <div class="col-lg-3" ></div>
+ </div>
+    <script>
+        $('select').on("change",function () {
+
+            if (this.value == "select an id proof") {
+               
+                $("#an").attr("placeholder",this.value)
+               
+            }
+            else {
+                $('#an').show();
+                $("#an").attr("placeholder", "Enter " + this.value + " Number");
+            }
+        });
+    </script>
+</body>
+
+</html>

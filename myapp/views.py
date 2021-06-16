@@ -29,7 +29,10 @@ def test14(request):
     return render(request,'count.html')
 def test15(request):
     return render(request,'second.html')
-def test16(request):
-    return render(request,'js.html')     
+# def test16(request):
+    # return render(request,'js.html')     
+def test18(request):
+    return render(request,'slide.html')
 def test17(request):
-    return render(request,'calculator.html') 
+    return render(request,'calculator.html')
+ 
